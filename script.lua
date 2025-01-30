@@ -48,6 +48,7 @@ if EXECUTION_TIME < 0.001 then
 end
 if getgenv().DeleteWait then
 	task.wait(3)
-	Holder:Destroy()
+	Folder:Destroy()
+	mainHolder:Destroy()
 	warn("DEBUG: SUCCESSFULLY DELETED ESSENTIAL")
 end
