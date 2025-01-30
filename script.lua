@@ -9,10 +9,10 @@ local mouse = plr:GetMouse()
 mainHolder = Instance.new("ScreenGui", plr.PlayerGui)
 essential = Instance.new("Frame", mainHolder)
 --vpHolder = Instance.new("ViewportFrame", mainHolder)
-Holder = Instance.new("Folder", ws)
+Folder = Instance.new("Folder", ws)
 partHolder = Instance.new("Part", Holder)
 
-Holder.Name = "Holder"
+Folder.Name = "Essential"
 partHolder.CFrame = plr.Character.HumanoidRootPart.CFrame
 partHolder.Size = Vector3.new(2.75, 2.75, 2.75)
 partHolder.Anchored = true
@@ -20,9 +20,9 @@ partHolder.CanCollide = false
 mouse.Move:Connect(function()
 	local target = mouse.Target
 	
-	for _, v in pairs(ws.Holder:GetDescendants()) do
+	for _, v in pairs(ws.Essential:GetDescendants()) do
 		if target == v then
-			
+			print("well")
 		end
 	end
 end)
